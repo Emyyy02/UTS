@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #2ce51f;
+  --secondary-color: #000000;
+  --card-color: #000000;
+  --pad-desktop: 200px;
+  --pad-mobile: 30px;
+  --pad-tab: 50px;
+  --fn-400: 400;
+  --fn-500: 500;
+  --fn-600: 600;
+  --fn-700: 700;
+  --fn-800: 800;
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "poppins", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(248, 255, 192);
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: yellow;
+  z-index: 999;
+  height: 100px;
+  padding: 0 var(--pad-desktop);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 19px 1px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav .item-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+nav .item-link.active,
+.item-link:hover {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+}
+
+section {
+  border-bottom: 2px solid var(--secondary-color);
+  padding: 2.5rem 0rem;
+}
+
+section .title-section {
+  width: 100%;
+  text-align: center;
+}
+
+section.title-section h1 {
+  font-size: 36px;
+  color: var(--primary-color);
+}
+
+.jusify-center {
+  justify-content: center;
+}
+
+.row {
+  margin: 50px 0px;
+  width: 100%;
+  padding: 20px var(--pad-desktop);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.landing {
+  display: block;
+}
+
+.landing h1 {
+  color: var(--primary-color);
+  font-weight: var(--fn-700);
+  font-size: 64px;
+  margin: 0;
+}
+
+.landing u,
+.landing span {
+  font-weight: var(--fn-700);
+  font-size: 25px;
+}
+
+.landing span {
+  color: var(--primary-color);
+  margin-left: 10px;
+  animation-name: change;
+  animation-duration: 3s;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+}
+
+.landing .quotes {
+  color: var(--secondary-color);
+  line-height: 30px;
+  margin: 15px 0px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+@keyframes change {
+  0% {
+    color: #fff;
+  }
+
+  50% {
+    color: var(--primary-color);
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-default {
+  border-radius: 14px;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: var(--fn-600);
+  box-shadow: 6px 6px 8px 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-outline {
+  border-radius: 14px;
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  font-weight: var(--fn-700);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-outline:hover {
+  background: var(--primary-color) !important;
+  color: #fff;
+  box-shadow: 6px 6px 8px 1px rgba(0, 0, 0, 0.39);
+}
+
+.btn-default:hover {
+  background: blue !important;
+}
+
+[class*="col-"] {
+  padding: 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.card {
+  /* box-shadow: 0px 0px 14px 14px rgba(0, 0, 0, 0.25); */
+  border: 2px solid var(--card-color);
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.story {
+  font-weight: var(--fn-400);
+  color: var(--secondary-color);
+  text-align: justify;
+  line-height: 40px;
+}
+
+.profile-circle {
+  border-radius: 100px;
+  width: 150px;
+}
+
+.name {
+  font-weight: var(--fn-700);
+  font-size: 18px;
+  margin: 15px 0px 0px;
+}
+
+.name+span {
+  color: var(--primary-color);
+  font-weight: var(--fn-600);
+  font-size: 15px;
+}
+
+.sosmed {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mb-1 {
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 20px;
+  color: #636161;
+  padding: 15px;
+  outline: none;
+  resize: none;
+}
+
+footer {
+  /* background-color: var(--primary-color); */
+  background-color: yellow;
+  padding: 2rem;
+  text-align: center;
+  width: auto;
+  height: 400px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(255, 3, 3);
+}
+
+@media only screen and(max-width: 1500px) {
+  .col-t-1 {
+    width: 8.33%;
+  }
+
+  .col-t-2 {
+    width: 16.66%;
+  }
+
+  .col-t-3 {
+    width: 25%;
+  }
+
+  .col-t-4 {
+    width: 33.33%;
+  }
+
+  .col-t-5 {
+    width: 41.66%;
+  }
+
+  .col-t-6 {
+    width: 50%;
+  }
+
+  .col-t-7 {
+    width: 58.33%;
+  }
+
+  .col-t-8 {
+    width: 66.66%;
+  }
+
+  .col-t-9 {
+    width: 75%;
+  }
+
+  .col-t-10 {
+    width: 83.33%;
+  }
+
+  .col-t-11 {
+    width: 91.66%;
+  }
+
+  .col-t-12 {
+    width: 100%;
+  }
+
+  .img-landing {
+    display: none;
+  }
+
+  .row {
+    padding: 0px var(--pad-tab);
+  }
+
+  .navbar {
+    padding: 0px var(--pad-tab);
+  }
+
+  .card img,
+  .card button {
+    width: 100px;
+    overflow: scroll;
+    overflow: hidden;
+    font-size: 14px;
+  }
+
+  .profile-circle {
+    border-radius: 100px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .col-m-1 {
+    width: 8.33%;
+  }
+
+  .col-m-2 {
+    width: 16.66%;
+  }
+
+  .col-m-3 {
+    width: 25%;
+  }
+
+  .col-m-4 {
+    width: 33.33%;
+  }
+
+  .col-m-5 {
+    width: 41.66%;
+  }
+
+  .col-m-6 {
+    width: 50%;
+  }
+
+  .col-m-7 {
+    width: 58.33%;
+  }
+
+  .col-m-8 {
+    width: 66.66%;
+  }
+
+  .col-m-9 {
+    width: 75%;
+  }
+
+  .col-m-10 {
+    width: 83.33%;
+  }
+
+  .col-m-11 {
+    width: 91.66%;
+  }
+
+  .col-m-12 {
+    width: 100%;
+  }
+
+  .varbar {
+    padding: 0px var(--pad-mobile);
+  }
+
+  .navbar .logo-link {
+    display: none;
+  }
+
+  .row {
+    padding: 10px var(--pad-mobile);
+  }
+
+  .card img,
+  .card button {
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: 12px;
+  }
+
+  .img-landing {
+    display: none;
+  }
+}
+
+.bob {
+  width: 100%;
+  height: 100%;
+}
